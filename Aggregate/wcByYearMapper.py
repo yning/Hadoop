@@ -13,16 +13,7 @@ for stw in stopfile:
 	stw = stw.strip()
 	stopwords.append(stw)
 
-for line in sys.stdin:#filename in sys.stdin:
-#	base = os.path.basename(onefile)
-	#file_path = dir_path + filename.strip()
-	#rfile = open(file_path,'r')
-	#cat = subprocess.Popen(["hadoop","fs","-cat",file_path],stdout=subprocess.PIPE)
-	#allstring =rfile.read()
-	#allstring = re.sub(r'<[^>]*>','',allstring)
-	#year = filename[0:4]
-#	filename = os.path.splittext(base)[0][0:3]
-	#for line in rfile.readlines():
+for line in sys.stdin:
 	line = re.sub(r'<[^>]*>','',line)
 	line = re.sub(r'<[^>]*','',line)
 	line = re.sub(r'[^>]*>','',line)
