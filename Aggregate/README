@@ -1,5 +1,5 @@
 ********************************************************************************
-****                    Shell Script Files                                 ****
+****                    Shell Script Files                                  ****
 ********************************************************************************
 runyear.sh:
 To get the total word count for each year, run wcYearMapper.py and wcYearReducer.py 
@@ -14,6 +14,8 @@ Then, use wcAvgByYearMapper.py, we divide each word count per year by the total 
 ********************************************************************************
 ****                    Python Script Files                                 ****
 ********************************************************************************
+Firstly, data come from : http://stateoftheunion.onetwothree.net/texts/index.html
+
 
 YearMapper.py, YearReducer.py:
 Mapper and Reducer python scripts to get the total words count in each year.
