@@ -65,28 +65,15 @@ public class Controller extends Configured implements Tool
     {
 
         try {
-            //Configuration testconf = new Configuration();
             Configuration jobconf = getConf();
 
-            //Path labels = new Path(jobconf.get("labelset"));
             Path dict = new Path(jobconf.get("dictionary"));
             Path inputTrainPath = new Path(jobconf.get("train"));
             Path inputTestPath = new Path(jobconf.get("test"));
             Path output = new Path(jobconf.get("output"));
 
             Path gainoutput = new Path(output.getParent(),"gain");
-            //Path model = new Path(output.getParent(),"gain/randomforest");
             Path testoutput = new Path(output.getParent(),"eval");
-            //Path wcoutput = new Path(output.getParent(), "count");
-           // Path prioroutput = new Path(output.getParent(), "prior");
-            //Path model = new Path(output.getParent(), "model");
-            //Path joined = new Path(output.getParent(),"joined");
-
-            //Path testjoinPath = new Path(output.getParent(), "testjoin");
-            //Path classifyoutput = new Path(output.getParent(), "classify");
-            //Path evalPath = new Path(output.getParent(), "eval");
-
-            //DistributedCache.addCacheFile(labels.toUri(), jobconf);
             DistributedCache.addCacheFile(dict.toUri(), jobconf);
             Controller.delete(jobconf, gainoutput);
             Job gainjob= new Job(jobconf, "InfoGain");
@@ -111,7 +98,6 @@ public class Controller extends Configured implements Tool
             }
 
             DistributedCache.addCacheFile(inputTestPath.toUri(), jobconf);
-            //DistributedCache.addCacheFile(model.toUri(), jobconf);
             Controller.delete(jobconf, testoutput);
             Job testjob= new Job(jobconf, "Test");
             testjob.setJarByClass(Controller.class);
