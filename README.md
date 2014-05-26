@@ -6,3 +6,7 @@ Hadoop
 
 2) Compute the maximum and minimum times a word appears in all the state of the union addresses.
 
+** lshtc **:
+
+http://www.kaggle.com/c/lshtc
+
