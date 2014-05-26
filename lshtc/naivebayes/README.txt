@@ -2,7 +2,6 @@
 *                                                                                 *
 *                              Shell files                                        *
 *                                                                                 *
-*                                                                                 *
 ===================================================================================
 runmnb.sh:
 run multinormial naive bayes algorithm on map reduce in distributed mode.
