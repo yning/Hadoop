@@ -6,5 +6,5 @@
 
    - 2) Compute the maximum and minimum times a word appears in all the state of the union addresses.
 
-- lshtc(#lshtc): http://www.kaggle.com/c/lshtc
+- [lshtc](#lshtc): http://www.kaggle.com/c/lshtc
 
