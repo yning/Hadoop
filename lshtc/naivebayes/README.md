@@ -2,6 +2,7 @@
 
 ### Shell:
 - runmnb.sh: run multinormial naive bayes algorithm on map reduce in distributed mode.
+
 ### Input:
 
 - Required files:
@@ -17,4 +18,4 @@ In order to do 5-fold cross validation, we need the following input files: r1.tr
 
 - TestDataMapper.java, TestModelMapper.java, TestReduce.java: Join the trained model with test data.
 
--ClassifyMap.java, ClassifyReduce.java: Classify test documents given the joined data.
+- ClassifyMap.java, ClassifyReduce.java: Classify test documents given the joined data.
