@@ -1,26 +1,17 @@
-===================================================================================
-*                                                                                 *
-*                              Shell files                                        *
-*                                                                                 *
-===================================================================================
+## Random Forest model on hierarchical text classification with multiple labels
+
+### Shell
 - runrf.sh: run random forest hadoop program on distributed mode.
 
-===================================================================================
-*                                                                                 *
-*                              Input files                                        *
-*                                                                                 *
-===================================================================================
 
+### Input:
 - Required files:
 In order to do 5-fold cross validation, we need the following input files:
 
 r1.train, r1.test, r2.train, r2.test, r3.train, r3.test, r4.train, r4.test, r5.train, r5.test 
 
-===================================================================================
-*                                                                                 *
-*                              Source files                                       *
-*                                                                                 *
-===================================================================================
+### Source Code:
+
 - Controller.java:
 Control mapreduce jobs to work in order and compute MaF, MaP, MaR for the test document set.
 
