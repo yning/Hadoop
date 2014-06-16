@@ -22,8 +22,8 @@ uinfo100k, uinfo1m, uinfo10m(Needed in lift computation)
 - PairsOccurrence.java: Using "pairs" approach to compute frequency of co-occurrence for every pair of movies that recieve a high 
 ranking from the same user.
     - Input: userid::movieid::ratings::timestamp
-    - Output: \< movie1ID, movie2ID	frequency\>
-    - Final output: <movie1Name, movie2Name	frequency>
+    - Output: \<movie1_ID, movie2_ID	frequency\>
+    - Final output: \<movie1_Name, movie2_Name	frequency\>
 
 
 - StripesOccurrence.java: Using "stripes" approach to compute frequency of co-occurrence for every pair of movies that recieve a high 
