@@ -29,15 +29,15 @@ ranking from the same user.
 - StripesOccurrence.java: Using "stripes" approach to compute frequency of co-occurrence for every pair of movies that recieve a high 
 ranking from the same user.
     - Input: userid::movieid::ratings::timestamp
-    - Output: <movie1ID, movie2ID	frequency>
-    - Final output: <movie1Name, movie2Name	frequency>
+    - Output: \<movie1_ID, movie2_ID	frequency\>
+    - Final output: \<movie1_Name, movie2_Name	frequency\>
 
 - PairsConditional.java: Compute conditional probability p(a|b) where a,b are both movies. 
 In the mean time of collecting the co-occurence of each pair, also output the count for each movie. In next mapreduce job, after mappers collecting the cout of each pair and each movie, reducers output the conditional probability p(a|b)= count(b,a)/count(b).
 
 I add one more job to sort on conditional probabily and read movie names from distributed file and put the names in the output.
 - Input: userid::movieid::ratings::timestamp
-- Output: <movie1\_name, movie2\_name	conditional\_probability>
+- Output: \<movie1\_name, movie2\_name	conditional\_probability\>
 
 
 - PairsLift.java: Compute lift(a,b) = p(a|b)/p(a) where a,b are both movies.
@@ -46,4 +46,4 @@ After I get the conditional probability, output the probability of "a" in the sa
 In next mapreduce job of computing lift, mappers collect the probability of "a" and conditional probability p(a|b). reducers are responsible for computing the lift given the p(a|b) and p(a). At last, output the pairs with lift greater than 1.2.
 
 - Input: userid::movieid::ratings::timestamp
-- Output: <movie1\_name, movie2\_name	lift>
+- Output: \<movie1\_name, movie2\_name	lift\>
