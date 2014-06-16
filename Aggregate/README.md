@@ -9,7 +9,7 @@ Then, use wcAvgByYearMapper.py, we divide each word count per year by the total 
 
 ## Python Scripts:
 
-Firstly, data come from : http://stateoftheunion.onetwothree.net/texts/index.html
+Firstly, data comes from : http://stateoftheunion.onetwothree.net/texts/index.html
 
 - YearMapper.py, YearReducer.py: Mapper and Reducer python scripts to get the total words count in each year.
     - Input: original html files and STOPWORDS.TXT
