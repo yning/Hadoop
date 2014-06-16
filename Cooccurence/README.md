@@ -22,15 +22,15 @@ uinfo100k, uinfo1m, uinfo10m(Needed in lift computation)
 - PairsOccurrence.java: Using "pairs" approach to compute frequency of co-occurrence for every pair of movies that recieve a high 
 ranking from the same user.
     - Input: userid::movieid::ratings::timestamp
-    - Output: <movie1\_id1, movie2\_id	frequency>
-    - Final output: <movie1\_name, movie2\_name	frequency>
+    - Output: <movie1ID, movie2ID	frequency>
+    - Final output: <movie1Name, movie2Name	frequency>
 
 
 - StripesOccurrence.java: Using "stripes" approach to compute frequency of co-occurrence for every pair of movies that recieve a high 
 ranking from the same user.
     - Input: userid::movieid::ratings::timestamp
-    - Output: <movie1\_id1, movie2\_id	frequency>
-    - Final output: <movie1\_name, movie2\_name	frequency>
+    - Output: <movie1ID, movie2ID	frequency>
+    - Final output: <movie1Name, movie2Name	frequency>
 
 - PairsConditional.java: Compute conditional probability p(a|b) where a,b are both movies. 
 In the mean time of collecting the co-occurence of each pair, also output the count for each movie. In next mapreduce job, after mappers collecting the cout of each pair and each movie, reducers output the conditional probability p(a|b)= count(b,a)/count(b).
